@@ -53,31 +53,43 @@ body {
 }
 
 .calculator button {
-  background-image:linear-gradient(#f753ca, #c6259a);
+  background-image:linear-gradient(#f753ca, #7b27c9);
   padding:10px;
   font-size: 20px;
   border:1px solid #222;
+  border-bottom:2px solid #222;
   margin:0;
-  border-radius: 4px;
+  border-radius: 50%;
   outline: none;
   width:60px;
   height:60px;
   color:#ffffff;
 }
 
-.calculator button.clear-btn {
-  background:#ccc;
-  width:100%;
-  color:#333;
+.calculator button:active {
+  background-image:linear-gradient(#de53f7, #7b27c9 );
+  border-bottom:1px solid #222;
 }
 
-.calculator button.pressed {
-  background-image:linear-gradient(#c6259a, #f753ca);
+.calculator button.clear-btn {
+  background-image:linear-gradient(#efefef, #ccc);
+  width:100%;
+  color:#333;
+  border-radius:30px;
+  margin-top:10px;
+}
+
+.calculator .calc-btn.operator {
+  background-image:linear-gradient(#68b2f7, #7b27c9);
+}
+.calculator .calc-btn.operator:active {
+  background-image:linear-gradient(#7b27c9, #7268f7);
 }
 
 .display {
   background:#ffffff;
-  padding:10px;
+  padding:15px 10px;
+  position:relative;
   width:100%;
   margin:0 0 15px;
   color:#464646;
@@ -92,6 +104,9 @@ body {
 .previous-number {
   font-size: 14px;
   height:20px;
+  position:absolute;
+  top:5px;
+  left:10px;
 }
 .current-number {
   height:30px;

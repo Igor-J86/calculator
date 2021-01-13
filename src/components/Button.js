@@ -2,7 +2,7 @@ import React from 'react';
 
 class Button extends React.Component {
     isOperator = val => {
-        return !isNaN(val) || val === '.' || val === '=';
+        return !isNaN(val) || !val === '.' || !val === '=';
     }
     render() {
         return(

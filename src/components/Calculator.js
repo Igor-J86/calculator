@@ -9,7 +9,6 @@ class Calculator extends React.Component {
         this.state = {
             input: '',
             previousNumber: '',
-            currentNumber: '',
             operator:''
         }
     }
@@ -36,7 +35,6 @@ class Calculator extends React.Component {
         this.setState({
             input: '',
             previousNumber: '',
-            currentNumber: '',
             operator:''
         });
     }
@@ -74,23 +72,21 @@ class Calculator extends React.Component {
     }
 
     evaluate = () => {
-        this.state.currentNumber = this.state.input;
-
         if(this.state.operator === '+') {
             this.setState({
-                input: parseFloat(this.state.previousNumber) + parseFloat(this.state.currentNumber)
+                input: parseFloat(this.state.previousNumber) + parseFloat(this.state.input)
             });
         } else if(this.state.operator === '-') {
             this.setState({
-                input: parseFloat(this.state.previousNumber) - parseFloat(this.state.currentNumber)
+                input: parseFloat(this.state.previousNumber) - parseFloat(this.state.input)
             });
         } else if(this.state.operator === '*') {
             this.setState({
-                input: parseFloat(this.state.previousNumber) * parseFloat(this.state.currentNumber)
+                input: parseFloat(this.state.previousNumber) * parseFloat(this.state.input)
             });
         } else if(this.state.operator === '/') {
             this.setState({
-                input: parseFloat(this.state.previousNumber) / parseFloat(this.state.currentNumber)
+                input: parseFloat(this.state.previousNumber) / parseFloat(this.state.input)
             });
         }
 
@@ -114,7 +110,7 @@ class Calculator extends React.Component {
                     <Button btnValue="4" handleClick={this.addToInput}/>
                     <Button btnValue="5" handleClick={this.addToInput}/>
                     <Button btnValue="6" handleClick={this.addToInput}/>
-                    <Button btnValue="*" handleClick={this.multiply}/>
+                    <Button btnValue="&times;" handleClick={this.multiply}/>
                 </div>
                 <div className="row">   
                     <Button btnValue="1" handleClick={this.addToInput}/>
