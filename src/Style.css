@@ -31,7 +31,7 @@ body {
   justify-content: center;
 }
 .calculator {
-  background:#333;
+  background-image:linear-gradient(#7b27c9, #f753ca);
   padding:20px;
   border-radius: 8px;
   color:#ffffff;
@@ -56,7 +56,7 @@ body {
   background-image:linear-gradient(#f753ca, #7b27c9);
   padding:10px;
   font-size: 20px;
-  border:1px solid #222;
+  border:none;
   border-bottom:2px solid #222;
   margin:0;
   border-radius: 50%;
@@ -72,17 +72,18 @@ body {
 }
 
 .calculator button.clear-btn {
-  background-image:linear-gradient(#efefef, #ccc);
+  background-image:linear-gradient(#68b2f7, #7b27c9);
   width:100%;
-  color:#333;
   border-radius:30px;
   margin-top:10px;
 }
 
-.calculator .calc-btn.operator {
+.calculator .calc-btn.operator,
+.calculator button.clear-btn {
   background-image:linear-gradient(#68b2f7, #7b27c9);
 }
-.calculator .calc-btn.operator:active {
+.calculator .calc-btn.operator:active,
+.calculator button.clear-btn:active {
   background-image:linear-gradient(#7b27c9, #7268f7);
 }
 
